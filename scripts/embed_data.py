@@ -5,15 +5,14 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema import Document
 from langchain_community.vectorstores import faiss
 from langchain_openai import OpenAIEmbeddings
-import sys
 
 if  __name__ == "__main__":
     API_KEY = os.getenv("OPENAI_API_KEY")
     if not API_KEY:
-        print("API Key is not set as env variable")
-        sys.exit()
+        raise Exception("API Key is not set as env variable")
     metadata_dir = "data/paper_metadata.json"
     papers_dir = "data/papers"
+    
     with open(metadata_dir, "r") as f:
         papers = json.load(f)
 
