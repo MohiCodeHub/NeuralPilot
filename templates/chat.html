@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="session-id" content="{{ session_id }}">
+    <title>NeuralPilot - Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/templates/styles/base.css">
+    <link rel="stylesheet" href="/templates/styles/chat.css">
+</head>
+<body>
+    <div class="header">
+        <h1>NeuralPilot</h1>
+        <a href="/" class="back-button">← Back to Home</a>
+    </div>
+
+    <div class="chat-container">
+        <div id="chatbox">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        
+        <div class="input-section">
+            <input 
+                id="input" 
+                type="text" 
+                placeholder="Ask me about machine learning research..." 
+                autocomplete="off"
+            />
+            <button class="send-button" onclick="sendMessage()">
+                <svg class="send-icon" viewBox="0 0 24 24">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="/templates/scripts/chat.js"></script>
+</body>
+</html>
