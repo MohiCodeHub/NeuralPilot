@@ -3,7 +3,7 @@ Deployed as a web app using FastAPI.
 
 ```markdown
 neuralpilot/
-├── model.py           # LLM & embedding logic
+├── model.py           # LLM & RAG logic
 ├── app/               # FastAPI routes
 ├── data/              # Embedded vectors and raw data
 ├── scripts/           # One-off scripts (downloading data, chunking, and embedding)
